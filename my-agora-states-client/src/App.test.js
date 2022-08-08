@@ -7,10 +7,10 @@ import App from "./App";
 //   expect(linkElement).toBeInTheDocument();
 // });
 
-test("실험👩‍🔬", () => {
+test("실험", () => {
   expect(2 + 2).toBe(4);
 });
 
-test("실험2👩‍🔬", () => {
+test("실험2", () => {
   expect(2 + 2).toBe(4);
 });
