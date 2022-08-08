@@ -37,7 +37,7 @@ jobs:
           npm run build
         working-directory: ./my-agora-states-client
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: ../../my-agora-states-client/build # The folder the action should deploy.
+      # - name: Deploy 🚀
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     folder: ../../my-agora-states-client/build # The folder the action should deploy.
