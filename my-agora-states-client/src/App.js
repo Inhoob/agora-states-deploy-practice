@@ -46,9 +46,6 @@ function App() {
       }
     });
   };
-  function sum(a, b) {
-    return a + b;
-  }
 
   return (
     <>
