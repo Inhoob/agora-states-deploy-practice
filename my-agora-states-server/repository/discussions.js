@@ -1,7 +1,7 @@
-const createDOMPurify = require('dompurify');
-const { JSDOM } = require('jsdom');
+const createDOMPurify = require("dompurify");
+const { JSDOM } = require("jsdom");
 
-const window = new JSDOM('').window;
+const window = new JSDOM("").window;
 const DOMPurify = createDOMPurify(window);
 
 module.exports.agoraStatesDiscussions = [
@@ -31,7 +31,7 @@ module.exports.agoraStatesDiscussions = [
     createdAt: "2022-05-15T23:57:43Z",
     updatedAt: "2022-05-15T23:57:43Z",
     title:
-      "반복되는 문자 리턴 문제에서 ' '(공백하나인 문자열)입력시 오류가 발생합니다.",
+      "복되는 문자 리턴 문제에서 ' '(공백하나인 문자열)입력시 오류가 발생합니다.",
     url: "https://github.com/codestates-seb/agora-states-fe/discussions/44",
     author: "JoeunNAL",
     answer: null,
@@ -833,20 +833,20 @@ module.exports.agoraStatesDiscussions = [
     avatarUrl:
       "https://avatars.githubusercontent.com/u/12145019?s=64&u=5c97f25ee02d87898457e23c0e61b884241838e3&v=4",
   },
-].map(discussion => {
+].map((discussion) => {
   if (discussion.answer) {
     return {
       ...discussion,
       bodyHTML: DOMPurify.sanitize(discussion.bodyHTML),
       answer: {
         ...discussion.answer,
-        bodyHTML: DOMPurify.sanitize(discussion.answer.bodyHTML)
-      }
-    }
+        bodyHTML: DOMPurify.sanitize(discussion.answer.bodyHTML),
+      },
+    };
   }
 
   return {
     ...discussion,
-    bodyHTML: DOMPurify.sanitize(discussion.bodyHTML)
-  }
-})
+    bodyHTML: DOMPurify.sanitize(discussion.bodyHTML),
+  };
+});
